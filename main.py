@@ -82,13 +82,15 @@ def compare_count(string, string1):
 # main function
 
 if __name__ == "__main__":
+    result = []
+    datas = []
 
     # assign ch ""
     ch = ""
     # open file common_words.dat 
     with open("common_words.dat", "r") as file:
         # loops 1000 times
-        for i in range(1000):
+        for i in range(1001):
             # read one line
             ch = file.readline()
             # take len-1
@@ -103,7 +105,7 @@ if __name__ == "__main__":
     # send to the function
     permute(list(word), 0, length(word))
     # get all combinations
-    all_comb = comb[1:length(comb) - 1] + result
+    all_comb = result
     # assign 0 and ""
     c = 0
     c_st = ""
